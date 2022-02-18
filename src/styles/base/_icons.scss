@@ -1,0 +1,24 @@
+.icons {
+    display: flex;
+    align-items: flex-start;
+    &-centered {
+        text-align: center;
+    }
+    &__icon {
+        font-size: 10px;
+        font-weight: 500;
+        width: 40px;
+        line-height: normal;
+        & + & {
+            margin: 0 0 0 14px;
+        }
+        img {
+            width: 22px;
+            height: 22px;
+            margin: 0 auto;
+        }
+        div {
+            margin: 4px 0 0 0;
+        }
+    }
+}

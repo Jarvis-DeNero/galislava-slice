@@ -1,3 +1,7 @@
+html, body {
+    font-family: 'Inter', sans-serif;
+    position: relative;
+}
 h1, h2, h3, h4, h5, h6, ul {
     margin: 0;
     padding: 0;
@@ -9,4 +13,118 @@ h1, h2, h3, h4, h5, h6, ul {
     @include md(max-width, rem(690));
     @include lg(max-width, rem(930));
     @include xl(max-width, rem(1110));
+}
+
+.row {
+    @include row-flex();
+    align-items: center;
+}
+.col-12 {
+    @include col();
+    @include size(12);
+}
+.col-11 {
+    @include col();
+    @include size(11);
+    @include size-lg(11);
+    @include size-md(11);
+    @include size-sm(12);
+}
+.col-10 {
+    @include col();
+    @include size(10);
+    @include size-lg(10);
+    @include size-md(10);
+    @include size-sm(12);
+}
+.col-9 {
+    @include col();
+    @include size(9);
+    @include size-lg(9);
+    @include size-md(9);
+    @include size-sm(12);
+    @include size-sm(12);
+}
+.col-8 {
+    @include col();
+    @include size(8);
+    @include size-lg(8);
+    @include size-md(8);
+    @include size-sm(12);
+    @include size-sm(12);
+}
+.col-7 {
+    @include col();
+    @include size(7);
+    @include size-lg(7);
+    @include size-md(7);
+    @include size-sm(12);
+    @include size-sm(12);
+}
+.col-6 {
+    @include col();
+    @include size(6);
+    @include size-lg(6);
+    @include size-md(6);
+    @include size-sm(12);
+    @include size-sm(12);
+}
+.col-5 {
+    @include col();
+    @include size(5);
+    @include size-lg(5);
+    @include size-md(5);
+    @include size-sm(5);
+    @include size-sm(12);
+}
+.col-4 {
+    @include col();
+    @include size(4);
+    @include size-lg(4);
+    @include size-md(4);
+    @include size-sm(12);
+}
+.col-3 {
+    @include col();
+    @include size(3);
+    @include size-lg(3);
+    @include size-md(3);
+    @include size-sm(12);
+}
+.col-2 {
+    @include col();
+    @include size(2);
+    @include size-lg(2);
+    @include size-md(12);
+    @include size-sm(12);
+}
+.col-1 {
+    @include col();
+    @include size(1);
+    @include size-lg(1);
+    @include size-md(12);
+    @include size-sm(12);
+}
+[class*=col-] {
+    box-sizing: border-box;
+    z-index: 10;
+}
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+img[src=""] {
+    display: none;
+}
+input, textarea {
+    &:focus::placeholder {
+        color: transparent;
+    }
+}
+input::placeholder, textarea::placeholder {
+    color: #000000;
+}
+.center {
+    text-align: center;
 }

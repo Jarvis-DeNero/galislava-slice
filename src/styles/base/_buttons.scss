@@ -1,0 +1,14 @@
+.button {
+    background: #FF5757;
+    box-shadow: 0 32px 64px -17px rgba(255, 87, 87, 0.35);
+    border-radius: 15px;
+    text-align: center;
+    padding: 13px 24px;
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 700;
+    &_uppercase {
+        text-transform: uppercase;
+    }
+}
