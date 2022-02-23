@@ -1,0 +1,18 @@
+.title {
+    font-size: 21px;
+    line-height: 25px;
+    color: #132241;
+    font-weight: 700;
+    margin: 0 0 8px 20px;
+}
+.subtitle {
+    color: #FF5757;
+    font-size: 10px;
+    margin: 0 0 0 20px;
+    &:hover {
+        text-decoration: none;
+    }
+    &:after {
+        content: " -->";
+    }
+}

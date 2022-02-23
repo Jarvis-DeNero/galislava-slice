@@ -1,5 +1,5 @@
 .button {
-    background: #FF5757;
+    background-color: #FF5757;
     box-shadow: 0 32px 64px -17px rgba(255, 87, 87, 0.35);
     border-radius: 15px;
     text-align: center;
@@ -8,6 +8,9 @@
     text-decoration: none;
     display: inline-block;
     font-weight: 700;
+    &:hover {
+        background-color: #DB3F4D;
+    }
     &_uppercase {
         text-transform: uppercase;
     }
