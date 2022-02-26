@@ -132,3 +132,10 @@ a {
     color: #FF5757;
     text-decoration: none;
 }
+p {
+    margin: 0;
+    padding: 0;
+}
+.col-left, .col-right {
+    width: 100%;
+}

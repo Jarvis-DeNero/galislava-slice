@@ -1,0 +1,18 @@
+.slider-services {
+    &__item {
+        margin: 0 16px;
+    }
+    &__name {
+        font-size: 21px;
+        line-height: 25px;
+        font-weight: 700;
+        margin: auto 0 5px 0;
+    }
+    &__desc {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    &__link {
+        margin: 18px 0 0 0;
+    }
+}

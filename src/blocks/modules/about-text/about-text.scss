@@ -1,5 +1,4 @@
 .about-text {
-    margin: 48px 0 0 0;
     &__content {
         color: #132241;
         margin: 0 20px;
@@ -19,7 +18,7 @@
 }
 .text-images {
     display: flex;
-    padding: 20px 0;
+    padding: 20px 0 0 0;
     &__col {
         width: 50%;
         &_middle {

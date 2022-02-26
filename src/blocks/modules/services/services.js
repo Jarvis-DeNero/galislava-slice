@@ -1,7 +1,7 @@
 import $ from "jquery";
 
 $(document).ready(function () {
-    const slider = $('.slider-default');
+    const slider = $('.slider-services');
     if (slider.length) {
         slider.slick({
             centerMode: true,
@@ -25,7 +25,7 @@ $(document).ready(function () {
                     settings: {
                         arrows: false,
                         centerMode: true,
-                        centerPadding: '30px',
+                        centerPadding: '70px',
                         slidesToShow: 1
                     }
                 }
