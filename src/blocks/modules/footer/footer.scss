@@ -1,0 +1,86 @@
+.footer {
+    background-color: #132241;
+    padding: 0 19px 35px 19px;
+    &__logo {
+        padding-top: 9px;
+        a {
+            display: inline-block;
+        }
+        img {
+            width: 77px;
+        }
+    }
+    &-menu {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 38px 0 0 0;
+        a {
+            color: #f8f8f8;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        &__item {
+            margin-bottom: 32px;
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            &_tertiary {
+                width: 31%;
+                text-align: left;
+                & + & {
+                    margin-left: 1%;
+                }
+                &:nth-child(2) {
+                    text-align: center;
+                }
+            }
+            &:nth-child(2n+5) {
+                text-align: center;
+            }
+        }
+        &__title {
+            font-size: 16px;
+            & + .footer-menu__subitem {
+                margin-top: 5px;
+            }
+        }
+        &__subitem {
+            display: block;
+            font-size: 10px;
+            margin: 0 0 0 12px;
+            & + & {
+                margin-top: 2px;
+            }
+        }
+    }
+    &__contacts {
+        font-size: 10px;
+        color: #F8F8F8;
+        [class*=icon-] {
+            margin: 3px 15px 0 0;
+        }
+        ul {
+            li {
+                display: flex;
+                align-items: flex-start;
+                line-height: 14px;
+                & + li {
+                    margin-top: 5px;
+                }
+            }
+        }
+        a {
+            color: #F8F8F8;
+        }
+    }
+    &__logo-akk {
+        margin-top: 45px;
+        a {
+            display: inline-block;
+        }
+        img {
+            width: 154px;
+        }
+    }
+}

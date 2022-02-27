@@ -131,6 +131,9 @@ input::placeholder, textarea::placeholder {
 a {
     color: #FF5757;
     text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 p {
     margin: 0;
@@ -138,4 +141,10 @@ p {
 }
 .col-left, .col-right {
     width: 100%;
+}
+ul {
+    list-style: none;
+}
+.disable-scroll {
+    overflow: hidden;
 }

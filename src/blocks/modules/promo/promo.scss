@@ -1,10 +1,11 @@
 .promo {
     min-height: 340px;
     width: 100%;
+    position: relative;
     &-slider {
         &__text {
             z-index: 10;
-            color: #FAFAFA;
+            color: #fafafa;
             position: absolute;
             font-weight: 500;
             font-size: 21px;
@@ -39,5 +40,36 @@
     }
     &__button {
         margin: 38px 0 0 0;
+    }
+    &-list {
+        display: none;
+        background-color: rgba(248, 248, 248, .95);
+        padding: 20px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        &_active {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__item {
+            width: 50%;
+            margin: 0 0 10px 0;
+        }
+        &__title {
+            font-weight: 700;
+            color: #132241;
+            font-size: 20px;
+            &_active {
+                color: #ff5757;
+            }
+        }
+        &__subitem {
+            color: #132241;
+            font-size: 10px;
+            margin: 4px 0 0 10px;
+            display: block;
+        }
     }
 }

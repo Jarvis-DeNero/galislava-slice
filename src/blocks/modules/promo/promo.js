@@ -12,7 +12,20 @@ $(document).ready(function () {
 
     const menu = $('section.menu');
     const promo = $('section.promo');
+    const promoList = promo.find('.promo-list');
+    let promoListTop = 0;
+
     if (menu.length && menu.css('background-color') === 'rgba(0, 0, 0, 0)') {
-        promo.css('margin-top', menu.innerHeight() * -1);
+        promoListTop = menu.innerHeight();
+        promo.css('margin-top', promoListTop * -1);
+    }
+
+    if (menu.length && promoList.length) {
+        promoList.css('top', promoListTop);
+        menu.on('click', '.menu__icon', function () {
+            $('body').toggleClass('disable-scroll');
+            menu.toggleClass('menu_active');
+            return promoList.toggleClass('promo-list_active');
+        });
     }
 });

@@ -3,7 +3,15 @@
     position: sticky;
     top: 0;
     z-index: 10;
-    &__wrapper {
+    &_active {
+        background-color: #f8f8f8;
+        .icon-menu {
+            &:before {
+                color: #132241;
+            }
+        }
+    }
+    &__wrap {
         display: flex;
         align-items: center;
         justify-content: space-between;
