@@ -1,0 +1,135 @@
+.room-page {
+    margin: 24px 0 48px 0;
+
+    p {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .title {
+        font-weight: 500;
+    }
+}
+
+.attributes {
+    margin: 24px 0 0 0;
+    display: flex;
+
+    &__cell {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        justify-content: center;
+        padding: 6px 8px;
+        background: #EFEFEF;
+        border-radius: 18px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+
+        &:first-child {
+            margin: 0 14px 0 0;
+        }
+    }
+
+    & + & {
+        margin: 11px 0 0 0;
+    }
+
+    &:last-child {
+        margin-bottom: 28px;
+    }
+
+    &__value {
+        font-size: 10px;
+        margin: 0 0 0 12px;
+        line-height: 12px;
+    }
+
+    &__img {
+        width: auto;
+    }
+}
+
+.prices {
+    margin: 48px 0 0 0;
+
+    table {
+        width: 100%;
+
+        tr {
+            font-size: 10px;
+            line-height: 12px;
+            color: #132241;
+
+            th {
+                font-weight: 300;
+            }
+
+            td {
+                text-align: center;
+                color: #FF5757;
+                padding: 10px 0 0 0;
+            }
+        }
+    }
+}
+
+.accordion {
+    margin: 48px 0 0 0;
+
+    &__header {
+        display: flex;
+        flex-grow: 1;
+        padding: .8rem 1rem;
+        border-bottom: 2px solid #132241;
+    }
+
+    &__item:first-child {
+        .accordion__header {
+            border-top: 2px solid #132241;
+        }
+    }
+
+    &__body {
+        display: none;
+        padding: .8rem 1rem;
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        margin: 0 0 0 auto;
+
+        .icon-plus {
+            display: inline-block;
+            transition: all .300s ease-out;
+        }
+    }
+
+    &__item {
+        &_opened {
+            .accordion__body {
+                display: block;
+            }
+
+            & + .accordion__item {
+                .accordion__header {
+                    border-top: 2px solid #132241;
+                }
+            }
+
+            .accordion__icon {
+                .icon-plus {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+}

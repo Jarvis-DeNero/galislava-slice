@@ -60,11 +60,21 @@
         [class*=icon-] {
             margin: 3px 15px 0 0;
         }
+        .icon-gps, .icon-phone {
+            font-size: 18px;
+            margin: 3px 18px 0 1px;
+        }
+        .icon-phone {
+            margin: 3px 15px 0 2px;
+        }
         ul {
             li {
                 display: flex;
                 align-items: flex-start;
                 line-height: 14px;
+                &:last-child {
+                    align-items: center;
+                }
                 & + li {
                     margin-top: 5px;
                 }

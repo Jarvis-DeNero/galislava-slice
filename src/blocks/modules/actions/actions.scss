@@ -3,10 +3,9 @@
 .actions {
     &__wrap {
         margin: 24px 0 0 0;
-        padding: 0 20px;
         & + .subtitle {
             display: block;
-            margin: 10px 0 0 20px;
+            margin: 10px 0 0 0;
         }
     }
     &__item {

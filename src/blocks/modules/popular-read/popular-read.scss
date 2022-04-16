@@ -1,0 +1,31 @@
+.popular-read {
+    margin: 20px 0 64px 0;
+    &__item {
+        margin: 40px 0 0 0;
+        &_first {
+            margin: 17px 0 0 0;
+        }
+    }
+    .title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+    }
+    &__title {
+        margin: 6px 0 0 0;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        a {
+            color: #132241;
+        }
+    }
+    &__preview {
+        margin: 6px 0 0 0;
+        font-size: 13px;
+        line-height: 16px;
+        text-align: center;
+    }
+}
