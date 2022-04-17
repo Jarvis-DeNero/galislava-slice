@@ -5,4 +5,5 @@ import "%modules%/services/services";
 import "%modules%/rooms/rooms";
 import "%modules%/room-page/room-page";
 import "%modules%/news/news";
+import "%modules%/list-services/list-services";
 import 'slick-carousel/slick/slick.min';

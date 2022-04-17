@@ -1,9 +1,11 @@
-.content {
-    margin: 13px 0 0 0;
+.content, .content_margin {
+    margin: 13px 0 40px 0;
     font-weight: 500;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 16px;
     color: #132241;
+}
+.content_margin {
     *:not(img) {
         margin: 0 1rem 10px 1rem;
     }
@@ -13,33 +15,37 @@
             margin: 4px 0 0 0;
             text-align: center;
             font-weight: 500;
-            font-size: 10px;
+            font-size: 12px;
             line-height: 12px;
             color: #A1A1A1;
         }
-    }
-    &__link {
-        color: #FF5757;
-        text-align: center;
-        display: block;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
-        margin: 0 0 10px 0;
-    }
-    cite {
-        background: #FF5757;
-        margin: 20px 0 15px 0;
-        padding: 20px 14px;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
-        color: #F8F8F8;
-        display: block;
-        font-style: normal;
     }
     a {
         color: #FF5757;
         text-decoration: underline;
     }
+    cite {
+        font-size: 12px;
+        margin: 20px 0 15px 0;
+    }
+}
+.link {
+    color: #FF5757;
+    text-align: center;
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0 0 10px 0;
+}
+cite {
+    background: #FF5757;
+    margin: 20px 0 15px 0;
+    padding: 20px 14px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #F8F8F8;
+    display: block;
+    font-style: normal;
 }

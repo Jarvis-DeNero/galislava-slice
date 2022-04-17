@@ -4,6 +4,8 @@
         align-items: center;
         min-height: 242px;
         background-image: linear-gradient(0deg, rgba(19, 34, 65, 0.51), rgba(19, 34, 65, 0.51)), var(--data-image);
+        background-repeat: no-repeat;
+        background-position: center center;
         .title {
             margin: 0 1rem;
             z-index: 10;
