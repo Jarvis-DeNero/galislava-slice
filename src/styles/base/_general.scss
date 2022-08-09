@@ -138,6 +138,9 @@ input::placeholder, textarea::placeholder {
 }
 .center {
     text-align: center;
+    &.center_with-margin {
+        margin: 40px 0 0 0;
+    }
 }
 a {
     color: #FF5757;
@@ -161,4 +164,10 @@ ul {
 }
 :root {
     --data-image: '';
+}
+.text_uppercase {
+    text-transform: uppercase;
+}
+.hidden {
+    display: none;
 }

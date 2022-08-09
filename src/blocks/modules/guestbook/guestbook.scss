@@ -1,0 +1,226 @@
+.guestbook {
+    margin: 0 0 48px 0;
+
+    &__list {
+        margin: 20px 0 0 0;
+    }
+
+    &__item {
+        margin: 2rem 0 0 0;
+    }
+
+    &__quotes {
+        position: absolute;
+
+        svg {
+            width: 23px;
+            height: 26px;
+        }
+
+        &_top-left {
+            top: -1rem;
+            left: -2rem;
+        }
+
+        &_bottom-right {
+            bottom: 0;
+            right: -2rem;
+        }
+    }
+
+    &__box {
+        background: #F2F2F2;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        padding: 2.5rem 3rem;
+        font-size: 12px;
+    }
+
+    &__text {
+        font-size: 12px;
+        line-height: 15px;
+        position: relative;
+    }
+
+    &__images {
+        margin: 1rem 0 0 0;
+
+        img {
+            width: auto;
+
+            & + img {
+                margin: 0 0 0 .5rem;
+            }
+        }
+    }
+
+    &__city {
+        margin: 4px 0 0 0;
+
+        &_bold {
+            font-weight: 700;
+        }
+    }
+
+    &__fio {
+        margin: 1rem 0 0 0;
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        margin: 6px 0 0 0;
+    }
+
+    &__date {
+        color: #A1A1A1;
+        margin: 0 0 0 auto;
+    }
+
+    &__rate {
+        line-height: 0;
+
+        img {
+            width: auto;
+        }
+    }
+
+    &__answer-button {
+        margin: 1rem 0 0 0;
+    }
+
+    &__answer {
+        display: none;
+        margin: 1.5rem 0 0 0;
+
+        &-body {
+            padding: 1rem;
+            background: #F2F2F2;
+            border-radius: 0 0 10px 10px;
+        }
+
+        &-header {
+            color: #ffffff;
+            padding: 6px 0 6px 23px;
+            background: #A1A1A1;
+            border-radius: 10px 10px 0 0;
+        }
+    }
+
+    .row {
+        align-items: flex-start;
+    }
+}
+
+.guestbook-form {
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    z-index: 10;
+
+    &_active {
+        display: block;
+    }
+
+    &:after {
+        content: '';
+        background-color: #132241;
+        opacity: 0.8;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .form-group {
+        & + .form-group {
+            margin: 2rem 0 0 0;
+        }
+
+        input {
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 1px solid #ffffff;
+            background: transparent;
+            width: 100%;
+            padding: 4px 0;
+            color: #ffffff;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:focus::placeholder {
+                color: transparent;
+            }
+        }
+
+        ::placeholder { /* Most modern browsers support this now. */
+            color: #ffffff;
+        }
+
+        button {
+            border: none;
+        }
+
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            background: #F8F8F8;
+            border: none;
+            height: 200px;
+            padding: 20px;
+
+            &:focus {
+                outline: none;
+            }
+
+            &::placeholder { /* Most modern browsers support this now. */
+                color: #A1A1A1;
+            }
+
+            &:focus::placeholder {
+                color: transparent;
+            }
+        }
+    }
+
+    .with-photo {
+        overflow: hidden;
+        background: #F8F8F8;
+        border-radius: 16px;
+        padding: 0 0 .1rem 0;
+
+        .add-photos {
+            color: #FF5757;
+            margin: 20px 0 20px 20px;
+            text-decoration: underline;
+        }
+    }
+
+    .guestbook-photos {
+        &:empty {
+            display: none;
+        }
+
+        color: #ffffff;
+        margin: .5rem 0 0 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        img {
+            width: calc(100% * (1 / 4) - 7px - 1px);
+            height: 64px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin: 10px 0 0 2%;
+        }
+    }
+}
