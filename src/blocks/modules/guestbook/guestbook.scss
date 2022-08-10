@@ -121,6 +121,9 @@
     right: 0;
     display: none;
     z-index: 10;
+    form {
+        background: none;
+    }
 
     &_active {
         display: block;
@@ -152,14 +155,6 @@
             width: 100%;
             padding: 4px 0;
             color: #ffffff;
-
-            &:focus {
-                outline: none;
-            }
-
-            &:focus::placeholder {
-                color: transparent;
-            }
         }
 
         ::placeholder { /* Most modern browsers support this now. */

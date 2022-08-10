@@ -9,7 +9,7 @@ $(document).ready(function () {
             slidesToShow: 3,
             prevArrow: '',
             nextArrow: '',
-            infinite: false,
+            infinite: true,
             responsive: [
                 {
                     breakpoint: 768,

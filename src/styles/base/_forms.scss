@@ -1,0 +1,30 @@
+form {
+    background-color: #F2F2F2;
+    select {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        transition: none;
+        background-image: url('../img/svg/arrow-down.svg');
+        background-repeat: no-repeat;
+        background-position: right 6px top 50%;
+        background-size: 16px 16px;
+        line-height: normal;
+        &:focus {
+            outline: none;
+        }
+    }
+    input {
+        &:focus {
+            outline: none;
+        }
+        &:focus::placeholder {
+            color: transparent;
+        }
+    }
+    button {
+        border: none;
+    }
+    .form-group {
+        position: relative;
+    }
+}

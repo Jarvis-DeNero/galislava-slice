@@ -5,3 +5,20 @@
         }
     }
 }
+.title-mobile {
+    background-color: #FF5757;
+    color: #ffffff;
+    padding: 5px 10px;
+    text-align: center;
+    width: 120px;
+    margin: 0 auto;
+    svg {
+        width: 8px;
+        height: 16px;
+        margin: 0 0 0 .5rem;
+        transform: rotate(270deg);
+        display: inline-block;
+        vertical-align: middle;
+        fill: #ffffff;
+    }
+}

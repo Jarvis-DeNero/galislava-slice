@@ -155,6 +155,15 @@ p {
 }
 .col-left, .col-right {
     width: 100%;
+    box-sizing: border-box;
+}
+.col-left {
+    @include lg(width, 55%);
+    @include lg(display, inline-block);
+}
+.col-right {
+    @include lg(width, 45%);
+    @include lg(display, inline-block);
 }
 ul {
     list-style: none;

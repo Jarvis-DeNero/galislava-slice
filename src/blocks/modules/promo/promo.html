@@ -2,9 +2,16 @@
     <div class="promo-slider">
         <div class="promo-slider__item">
             <div class="promo-slider__gradient"></div>
-            <img src="../img/promo-image.jpg" alt="promo image" class="promo-slider__image" />
+            <picture>
+                <source srcset="../img/promo-image.jpg" media="(max-width: 600px)">
+                <img src="../img/promo-image-big.jpg" alt="promo image" class="promo-slider__image" />
+            </picture>
             <div class="promo-slider__text">
-                ПРОВЕДИТЕ НЕЗАБЫВАЕМЫЙ<br/><span>ОТПУСК В КРЫМУ!</span>
+                <div class="promo-address">
+                    Гостевой дом <span style="color: #FF5757">«Галислава»</span><br/>
+                    п. Мирный, Евпатория, Крым
+                </div>
+                <div>ПРОВЕДИТЕ НЕЗАБЫВАЕМЫЙ<br/><span>ОТПУСК В КРЫМУ!</span></div>
                 <div class="icons icons-centered promo__icons">
                     <div class="icons__icon">
                         <img src="../img/slider-icon-01.png" alt="" />
@@ -26,9 +33,16 @@
         </div>
         <div class="promo-slider__item">
             <div class="promo-slider__gradient"></div>
-            <img src="../img/promo-image.jpg" alt="promo image" class="promo-slider__image" />
+            <picture>
+                <source srcset="../img/promo-image.jpg" media="(max-width: 600px)">
+                <img src="../img/promo-image-big.jpg" alt="promo image" class="promo-slider__image" />
+            </picture>
             <div class="promo-slider__text">
-                ПРОВЕДИТЕ НЕЗАБЫВАЕМЫЙ<br/><span>ОТПУСК В КРЫМУ!</span>
+                <div class="promo-address">
+                    Гостевой дом <span style="color: #FF5757">«Галислава»</span><br/>
+                    п. Мирный, Евпатория, Крым
+                </div>
+                <div>ПРОВЕДИТЕ НЕЗАБЫВАЕМЫЙ<br/><span>ОТПУСК В КРЫМУ!</span></div>
                 <div class="icons icons-centered promo__icons">
                     <div class="icons__icon">
                         <img src="../img/slider-icon-02.png" alt="" />
@@ -48,5 +62,27 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="promo__form">
+        <form action="#">
+            <div class="form-group">
+                <label for="date-arrival">Дата заезда</label>
+                <input type="text" id="date-arrival" value="" placeholder="10.09.2022" />
+                <span class="promo__icon icon-calendar"></span>
+            </div>
+            <div class="form-group">
+                <label for="date-departure">Дата выезда</label>
+                <input type="text" id="date-departure" value="" placeholder="11.09.2022" />
+                <span class="promo__icon icon-calendar"></span>
+            </div>
+            <div class="form-group">
+                <label for="guests-count">Гости</label>
+                <input type="text" id="guests-count" value="" placeholder="2" />
+                <span class="promo__icon icon-user2"></span>
+            </div>
+            <div class="form-group">
+                <button class="button button_uppercase" type="submit">Забронировать</button>
+            </div>
+        </form>
     </div>
 </section>

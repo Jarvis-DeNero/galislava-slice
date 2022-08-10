@@ -1,9 +1,23 @@
 @import "news";
 
 .actions {
+    .col-12 {
+        @include lg(display, flex);
+        @include lg(align-items, flex-start);
+        .col-right {
+            @include lg(margin-left, 1rem);
+            .title_margin {
+                @include lg(margin, 0);
+            }
+        }
+        .col-left {
+            @include lg(margin-right, 1rem);
+        }
+    }
     &__wrap {
         margin: 24px 0 0 0;
         & + .subtitle {
+            @include lg(margin, 30px 0 0 0);
             display: block;
             margin: 10px 0 0 0;
         }
@@ -16,9 +30,14 @@
         color: #f2f2f2;
     }
     &__date {
+        @include lg(font-size, 16px);
         font-size: 10px;
     }
     &__text {
+        @include lg(display, flex);
+        @include lg(flex-wrap, wrap);
+        @include lg(flex-direction, column);
+        @include lg(padding, 2rem 4rem);
         background: linear-gradient(90deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0) 100%);
         position: absolute;
         padding: 20px;
@@ -26,17 +45,24 @@
         right: 0;
         bottom: 0;
         left: 0;
+        > * {
+            width: 100%;
+        }
     }
     &__name {
+        @include lg(margin, 72px 0 5px 0);
+        @include lg(font-size, 64px);
         font-size: 21px;
         font-weight: 700;
         margin: 18px 0 5px 0;
     }
     &__preview {
+        @include lg(font-size, 20px);
         font-weight: 500;
         font-size: 16px;
     }
     &__button {
+        @include lg(margin, auto 0 0 0);
         margin: 18px 0 0 0;
     }
 }

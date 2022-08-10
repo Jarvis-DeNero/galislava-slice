@@ -40,8 +40,7 @@ $(document).ready(function () {
             }
 
             if (Math.round(file.size / 1024 / 1024) > 10) {
-                preview.insertAdjacentHTML('beforeend', `<div>У изображения ${file.name} размер больше 10Mb<div>`);
-                return false;
+                return preview.insertAdjacentHTML('beforeend', `<div>У изображения ${file.name} размер больше 10Mb<div>`);
             }
 
             const img = new Image();
