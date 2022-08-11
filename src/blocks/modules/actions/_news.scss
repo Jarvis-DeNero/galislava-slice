@@ -5,7 +5,7 @@
         margin: 24px 0 0 0;
         & + .subtitle {
             @include lg(margin, 30px 0 0 0);
-            @include lg(display, block);
+            @include lg(display, inline-block);
             display: none;
         }
     }

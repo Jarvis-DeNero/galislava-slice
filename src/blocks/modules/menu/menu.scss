@@ -10,7 +10,7 @@
         @include size-sm(4);
         @include size-xs(4);
     }
-    &_active {
+    &_active, &.inside-page {
         background-color: #f8f8f8;
         .icon-menu {
             &:before {
@@ -28,6 +28,9 @@
             &__phone {
                 color: #132241;
             }
+        }
+        .menu__label {
+            @include lg(color, #132241);
         }
     }
     &__wrap {

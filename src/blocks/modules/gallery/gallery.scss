@@ -1,11 +1,52 @@
 .gallery {
     .slider {
+        @include lg(margin, 40px 0 0 0);
         &__item {
             margin: 8px;
         }
     }
+    &-cats {
+        @include lg(display, block);
+        text-align: center;
+        display: none;
+        &__item {
+            position: relative;
+            color: #A1A1A1;
+            font-size: 20px;
+            display: inline-block;
+            & + li {
+                margin: 0 0 0 1rem;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+            &:after {
+                content: '';
+                background-color: #A1A1A1;
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                right: 0;
+                height: 2px;
+            }
+            &_active, &:hover {
+                color: #132241;
+                &:after {
+                    background-color: #132241;
+                }
+            }
+        }
+    }
+    .slider__pager {
+        @include lg(display, block);
+        display: none;
+        text-align: center;
+        color: #132241;
+        margin: 26px 0 0 0;
+    }
 }
 .title-mobile {
+    @include lg(display, none);
     background-color: #FF5757;
     color: #ffffff;
     padding: 5px 10px;

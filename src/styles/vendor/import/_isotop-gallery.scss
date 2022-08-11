@@ -45,10 +45,12 @@
     transition: none;
 }
 #filter {
+    @include lg(display, block);
     display: none;
     text-align: center;
     margin: 1rem 0 0 0;
     li {
+        @include lg(display, inline-block);
         a {
             padding: 5px 8px;
             display: inline-block;
@@ -66,6 +68,11 @@
     flex-wrap: wrap;
     margin: 1rem 0 0 0;
     article {
+        @include lg(width, 25%);
+        @include lg(margin-top, 20px);
+        @include lg(padding-left, 10px);
+        @include lg(padding-right, 10px);
+        box-sizing: border-box;
         width: 100%;
     }
 }

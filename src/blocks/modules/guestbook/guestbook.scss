@@ -87,6 +87,9 @@
 
     &__answer-button {
         margin: 1rem 0 0 0;
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &__answer {
@@ -211,6 +214,8 @@
         flex-wrap: wrap;
 
         img {
+            @include lg(width, calc(100% * (1 / 20) - 7px - 1px));
+            @include lg(margin, 10px 0 0 10px);
             width: calc(100% * (1 / 4) - 7px - 1px);
             height: 64px;
             object-fit: cover;

@@ -2,17 +2,28 @@
     &__item {
         margin: 0 16px;
     }
+    .rooms__text {
+        @include lg(padding, 20px);
+    }
     &__name {
+        @include lg(font-size, 35px);
+        @include lg(line-height, 40px);
+        @include lg(text-transform, uppercase);
+        @include lg(margin, auto 0 10px 0);
         font-size: 21px;
         line-height: 25px;
         font-weight: 700;
         margin: auto 0 5px 0;
     }
     &__desc {
+        @include lg(line-height, 24px);
+        @include lg(text-transform, uppercase);
+        @include lg(font-size, 20px);
         font-size: 16px;
         line-height: 19px;
     }
     &__link {
+        @include lg(margin, 40px 0 10px 0);
         margin: 18px 0 0 0;
     }
 }

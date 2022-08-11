@@ -7,8 +7,8 @@ $(document).ready(function () {
             centerMode: true,
             centerPadding: '60px',
             slidesToShow: 3,
-            prevArrow: '',
-            nextArrow: '',
+            prevArrow: '<span class="icon-arrowleft"></span>',
+            nextArrow: '<span class="icon-arrowright"></span>',
             infinite: true,
             responsive: [
                 {

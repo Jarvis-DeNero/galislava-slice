@@ -43,6 +43,9 @@
             z-index: 10;
             font-size: 28px;
             bottom: 30%;
+            &:hover {
+                cursor: pointer;
+            }
             &.icon-arrowleft {
                 left: 0.9375rem;
             }

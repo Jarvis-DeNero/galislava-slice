@@ -1,5 +1,6 @@
 .map {
     &__wrap {
+        @include lg(margin, 50px 0 0 0);
         display: flex;
         margin: 18px 0 0 0;
     }

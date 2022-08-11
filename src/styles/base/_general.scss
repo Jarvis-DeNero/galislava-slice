@@ -180,3 +180,6 @@ ul {
 .hidden {
     display: none;
 }
+.hidden-desktop {
+    @include lg(display, none);
+}

@@ -1,0 +1,12 @@
+.breadcrumbs {
+    &__item {
+        display: inline-block;
+        &:after {
+            content: " /";
+            color: #FF5757;
+        }
+        &:last-child:after {
+            content: "";
+        }
+    }
+}
