@@ -1,0 +1,43 @@
+.tabs-custom {
+    @include lg(display, block);
+    display: none;
+    width: 100%;
+    overflow: hidden;
+    margin: 4rem 0 0 0;
+    .tabs-custom {
+        margin: 2rem 0 0 0;
+    }
+    > ul {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        margin: 0;
+        list-style: none;
+        li {
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 20px;
+            color: #A1A1A1;
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                opacity: 0;
+                height: 3px;
+                bottom: -5px;
+                left: 0;
+                right: 0;
+                background-color: #132241;
+            }
+            & + li {
+                margin: 0 0 0 10px;
+            }
+            &.active, &:hover {
+                color: #132241;
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

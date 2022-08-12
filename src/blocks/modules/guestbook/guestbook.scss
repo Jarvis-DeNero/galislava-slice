@@ -123,13 +123,16 @@
     bottom: 0;
     right: 0;
     display: none;
-    z-index: 10;
-    form {
-        background: none;
+    z-index: 999;
+    .icon-close {
+        background-color: rgba(255, 255, 255, .9);
+        padding: 4px;
+        border-radius: 5px;
     }
-
-    &_active {
-        display: block;
+    form {
+        @include lg(width, 450px);
+        @include lg(margin, 8% auto 0);
+        background: none;
     }
 
     &:after {
@@ -200,6 +203,9 @@
             color: #FF5757;
             margin: 20px 0 20px 20px;
             text-decoration: underline;
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 
@@ -214,7 +220,7 @@
         flex-wrap: wrap;
 
         img {
-            @include lg(width, calc(100% * (1 / 20) - 7px - 1px));
+            @include lg(width, calc(100% * (1 / 5) - 7px - 1px));
             @include lg(margin, 10px 0 0 10px);
             width: calc(100% * (1 / 4) - 7px - 1px);
             height: 64px;

@@ -1,0 +1,39 @@
+.popup {
+    display: none;
+    position: fixed; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    .form-booking {
+        position: relative;
+        max-width:  500px;
+        margin: 20% auto 0;
+        display: block;
+        .icon-close {
+            display: block;
+        }
+        .form-group {
+            > div {
+                @include lg(width, 45%);
+                width: 100%;
+                & + div {
+                    @include lg(margin, 0 0 0 auto);
+                    margin: 1.5rem 0 0 0;
+                }
+            }
+        }
+    }
+}
+
+.icon-close {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    &:hover {
+        cursor: pointer;
+    }
+    svg {
+        width: 25px;
+        height: 25px;
+    }
+}

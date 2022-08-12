@@ -6,8 +6,8 @@ $(document).ready(function () {
         const slideToShowValue = $(this).attr('data-slide-to-show') ? $(this).attr('data-slide-to-show') : 3;
         slider.slick({
             slidesToShow: slideToShowValue,
-            prevArrow: '',
-            nextArrow: '',
+            prevArrow: '<span class="icon-arrowleft"></span>',
+            nextArrow: '<span class="icon-arrowright"></span>',
             infinite: false,
             responsive: [
                 {

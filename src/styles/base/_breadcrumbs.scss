@@ -1,5 +1,9 @@
 .breadcrumbs {
+    @include lg(margin, 1rem 0);
+    margin: 1rem 0 0 0;
     &__item {
+        @include lg(font-size, 16px);
+        font-size: 12px;
         display: inline-block;
         &:after {
             content: " /";

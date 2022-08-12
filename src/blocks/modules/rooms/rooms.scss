@@ -57,10 +57,6 @@
                 @include lg(display, inline-block);
                 border-radius: 20px;
                 box-sizing: border-box;
-                &:hover {
-                    @include lg(background, #DB3F4D);
-                    cursor: pointer;
-                }
             }
         }
         &__link {
@@ -76,6 +72,10 @@
                 @include lg(font-weight, 700);
                 @include lg(font-size, 20px);
                 @include lg(line-height, normal);
+                &:hover {
+                    @include lg(background, #DB3F4D);
+                    cursor: pointer;
+                }
             }
             a {
                 &:after {

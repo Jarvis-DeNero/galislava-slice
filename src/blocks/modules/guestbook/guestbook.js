@@ -15,7 +15,7 @@ $(document).ready(function () {
 
     if (guestbookForm.length && callGuestbookForm.length) {
         callGuestbookForm.on('click', function () {
-            return guestbookForm.toggleClass('guestbook-form_active');
+            return guestbookForm.fadeIn();
         });
     }
 

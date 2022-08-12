@@ -2,7 +2,7 @@
     padding: 15px 0;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
     .col-4:nth-child(3) {
         @include lg(order, -1);
     }
@@ -11,7 +11,7 @@
         @include size-xs(4);
     }
     &_active, &.inside-page {
-        background-color: #f8f8f8;
+        background-color: #ffffff;
         .icon-menu {
             &:before {
                 color: #132241;

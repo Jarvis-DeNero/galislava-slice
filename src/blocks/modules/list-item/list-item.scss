@@ -1,12 +1,16 @@
 .list-item-page {
     .title-image {
+        @include lg(justify-content, center);
         display: flex;
         align-items: center;
         min-height: 242px;
         background-image: linear-gradient(0deg, rgba(19, 34, 65, 0.51), rgba(19, 34, 65, 0.51)), var(--data-image);
         background-repeat: no-repeat;
         background-position: center center;
+        background-size: cover;
         .title {
+            @include lg(font-size, 64px);
+            @include lg(line-height, 77px);
             margin: 0 1rem;
             z-index: 10;
             font-size: 36px;

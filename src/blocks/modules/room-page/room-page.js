@@ -1,5 +1,4 @@
 import $ from "jquery";
-import AirDatepicker from '../../../js/vendor/air-datepicker';
 
 $(document).ready(function () {
     const accordion = $('.accordion');
@@ -12,6 +11,7 @@ $(document).ready(function () {
     }
 
     const roomPageSlider = $('.room-page-slider');
+    const sliderRoomThumbs = $('.slider-room-thumbs');
 
     if (roomPageSlider.length) {
         roomPageSlider.slick({
@@ -21,23 +21,38 @@ $(document).ready(function () {
             prevArrow: '<span class="icon-arrowleft"></span>',
             nextArrow: '<span class="icon-arrowright"></span>',
         });
+
+        roomPageSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+            const slickGoTo = Math.ceil(nextSlide/5) - 1;
+
+            sliderRoomThumbs.find('.slider-room-thumbs__item').removeClass('slider-room-thumbs__item_active');
+            sliderRoomThumbs.find('.slider-room-thumbs__item').eq(nextSlide).addClass('slider-room-thumbs__item_active');
+
+            return sliderRoomThumbs.slick('slickGoTo', slickGoTo);
+        });
+
+        sliderRoomThumbs.on('click', '.slider-room-thumbs__item', function () {
+            const _this = $(this);
+            const slickGoTo = _this.attr('data-index');
+            _this.siblings().removeClass('slider-room-thumbs__item_active');
+            _this.addClass('slider-room-thumbs__item_active');
+
+            return roomPageSlider.slick('slickGoTo', slickGoTo);
+        });
+
+        sliderRoomThumbs.slick({
+            centerMode: true,
+            centerPadding: '0',
+            slidesToShow: 1,
+            infinite: false,
+            prevArrow: '<span class="icon-arrowleft"></span>',
+            nextArrow: '<span class="icon-arrowright"></span>',
+            vertical: true
+        });
     }
 
-    let dpMin, dpMax;
-
-    dpMin = new AirDatepicker('.form-datepicker', {
-        onSelect({date}) {
-            dpMax.update({
-                minDate: date
-            })
-        }
-    })
-
-    dpMax = new AirDatepicker('#el2', {
-        onSelect({date}) {
-            dpMin.update({
-                maxDate: date
-            })
-        }
-    })
+    const tabs = $(".tabs-custom");
+    if (tabs.length) {
+        tabs.lightTabs();
+    }
 });

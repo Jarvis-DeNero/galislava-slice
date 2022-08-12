@@ -1,0 +1,117 @@
+.prices {
+    &-slider {
+        margin: 1rem 0;
+        &__item {
+            @include lg(margin, 0);
+            margin: 0 8px;
+        }
+    }
+    &__item {
+        @include lg(margin, 0 0 5rem 0);
+        margin: 0 0 2rem 0;
+    }
+    &-description {
+        @include lg(margin, 0);
+        color: #132241;
+        margin: 24px 0 0 0;
+        &__title {
+            @include lg(font-size, 64px);
+            @include lg(line-height, 77px);
+            font-weight: 700;
+            font-size: 21px;
+            line-height: 27px;
+            color: #132241;
+        }
+        &__subtitle {
+            @include lg(font-size, 20px);
+            @include lg(line-height, 24px);
+            font-size: 10px;
+            line-height: 12px;
+        }
+        &__preview {
+            @include lg(font-size, 16px);
+            @include lg(line-height, 20px);
+            margin: 2rem 0 0 0;
+            font-size: 10px;
+            line-height: 12px;
+            p {
+                @include lg(display, block);
+                margin: 1rem 0 0 0;
+                display: inline-block;
+                [class*=icon-] {
+                    font-size: 26px;
+                    margin: 0 .5rem 0 0;
+                }
+                &:nth-child(even) {
+                    @include lg(margin, 0);
+                    margin: 0 0 0 1rem;
+                }
+            }
+            ul {
+                margin: 1rem 0 0 1.5rem;
+                list-style: disc;
+                li {
+                    margin: .4rem 0 0 0;
+                }
+            }
+            img {
+                width: auto;
+            }
+            button {
+                margin: 3rem 0 0 0;
+                border: none;
+            }
+        }
+    }
+    .row {
+        align-items: flex-start;
+    }
+}
+
+.table-prices {
+    margin: 48px 0 0 0;
+
+    table {
+        width: 100%;
+
+        tr {
+            font-size: 10px;
+            line-height: 12px;
+            color: #132241;
+
+            th {
+                @include lg(font-size, 16px);
+                @include lg(color, #132241);
+                font-weight: 300;
+                &:first-child {
+                    @include lg(display, block);
+                    display: none;
+                    background: #132241;
+                    border-radius: 10px 0 0 0;
+                    font-size: 16px;
+                    line-height: 19px;
+                    padding: 15px 5px;
+                    color: #F8F8F8;
+                }
+            }
+
+            td {
+                @include lg(color, #132241);
+                @include lg(font-size, 20px);
+                text-align: center;
+                color: #FF5757;
+                padding: 10px 0 0 0;
+                &:first-child {
+                    @include lg(display, block);
+                    display: none;
+                    background: #132241;
+                    border-radius: 0 0 0 10px;
+                    font-size: 16px;
+                    line-height: 19px;
+                    padding: 15px 5px;
+                    color: #F8F8F8;
+                }
+            }
+        }
+    }
+}

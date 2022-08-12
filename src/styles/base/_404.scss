@@ -1,0 +1,25 @@
+.not-found-text {
+    @include lg(font-size, 103px);
+    @include lg(line-height, 124px);
+    @include lg(margin, 8rem 0 0 0);
+    font-weight: 700;
+    color: #132241;
+    font-size: 30px;
+    span {
+        font-size: 50px;
+        @include lg(font-size, 233px);
+        @include lg(line-height, 283px);
+        display: block;
+        &:last-child {
+            @include lg(font-size, 44px);
+            @include lg(line-height, 55px);
+            font-size: 30px;
+        }
+    }
+}
+.not-found-link {
+    @include lg(margin, 4rem 0 10rem 0);
+    @include lg(font-size, 44px);
+    @include lg(line-height, 55px);
+    margin: 2rem 0;
+}

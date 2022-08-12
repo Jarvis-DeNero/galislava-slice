@@ -1,0 +1,42 @@
+<div class="form-booking">
+    <form action="#">
+        <input type="hidden" name="room" value="" />
+        <div class="form-group">
+            <div>
+                <label for="date1">Дата приезда</label>
+                <input type="text" value="" id="date1" class="date-start" autocomplete="off" />
+                <span class="promo__icon icon-calendar"></span>
+            </div>
+            <div>
+                <label for="date2">Дата выезда</label>
+                <input type="text" value="" id="date2" class="date-finish" autocomplete="off" />
+                <span class="promo__icon icon-calendar"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="f-guests">Гости</label>
+            <input class="guests" id="f-guests" type="text" value="" placeholder="1" />
+            <span class="promo__icon icon-user2"></span>
+        </div>
+        <div class="form-group">
+            <label for="fio">ФИО</label>
+            <input id="fio" type="text" value="" placeholder="Введите свое имя" />
+        </div>
+        <div class="form-group">
+            <label for="f-email">Email</label>
+            <input id="f-email" type="email" value="" placeholder="Введите свой email" />
+        </div>
+        <div class="form-group">
+            <label for="f-phone">Телефон</label>
+            <input id="f-phone" type="text" value="" placeholder="+7" />
+        </div>
+        <div class="form-group">
+            <button type="submit" class="button button_uppercase">Забронировать</button>
+        </div>
+    </form>
+    <div class="icon-close">
+        <svg>
+            <use xlink:href="../img/sprites/sprite.svg#close"></use>
+        </svg>
+    </div>
+</div>

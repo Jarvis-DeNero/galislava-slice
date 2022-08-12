@@ -1,6 +1,33 @@
 .room-page {
-    margin: 24px 0 48px 0;
+    margin: 0 0 48px 0;
 
+    .button {
+        margin: 1rem 0 0 0;
+    }
+
+    .tabs-custom__item {
+        > *, p {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        color: #132241;
+
+        ul {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            li {
+                width: 49%;
+                margin: 0 0 2rem 0;
+                color: #132241;
+                span {
+                    margin: 0 10px 0 0;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
     .row {
         align-items: flex-start;
     }
@@ -27,26 +54,63 @@
             &:nth-child(n + 3) {
                 margin-top: .6rem;
             }
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: rgba(0, 0, 0, 0.25);
+                border-radius: 10px;
+            }
+            &_active {
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: transparent;
+                    border-radius: 10px;
+                }
+            }
+        }
+        &__slide {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .slick-arrow {
+            position: absolute;
+            z-index: 10;
+            font-size: 28px;
+            right: .5rem;
+            box-sizing: border-box;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 5px;
+            &.slick-disabled {
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+            &:before {
+                color: #132241;
+            }
+            &:hover {
+                background-color: #fff;
+                cursor: pointer;
+            }
+            &.icon-arrowleft {
+                top: .5rem;
+                transform: rotate(90deg);
+            }
+            &.icon-arrowright {
+                top: 3rem;
+                transform: rotate(90deg);
+            }
         }
     }
-    .slider-room-thumbs__count {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: rgba(0, 0, 0, 0.64);
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        span {
-            font-size: 20px;
-            line-height: 24px;
-            color: #FFFFFF;
-        }
-    }
-
     .title {
         font-weight: 500;
     }
@@ -94,66 +158,6 @@
             }
         }
     }
-    .form-booking {
-        margin: 2rem 0 0 0;
-        form {
-            padding: 2rem;
-            border-radius: 10px;
-        }
-        ::placeholder {
-            color: #A1A1A1;
-        }
-        input {
-            border-top: 0;
-            border-left: 0;
-            border-right: 0;
-            border-bottom: 1px solid #A1A1A1;
-            background: transparent;
-            width: 100%;
-            padding: 4px 0;
-            color: #A1A1A1;
-            margin: 4px 0 0 0;
-            &.guests {
-                width: 40%;
-                & + span {
-                    right: 60%;
-                }
-            }
-            &:focus::placeholder {
-                color: transparent;
-            }
-        }
-        .promo__icon {
-            position: absolute;
-            right: 0;
-            font-size: 22px;
-            bottom: 4px;
-        }
-        .form-group {
-            & + .form-group {
-                margin: 1.5rem 0 0 0;
-            }
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            >div {
-                position: relative;
-                box-sizing: border-box;
-                width: 45%;
-                &:last-child {
-                    margin: 0 0 0 auto;
-                }
-            }
-            &:last-child {
-                margin: 3rem 0 0 0;
-                justify-content: center;
-            }
-        }
-        label, input {
-            width: 100%;
-            display: block;
-        }
-    }
 }
 
 .attributes {
@@ -198,54 +202,6 @@
 
     &__img {
         width: auto;
-    }
-}
-
-.prices {
-    margin: 48px 0 0 0;
-
-    table {
-        width: 100%;
-
-        tr {
-            font-size: 10px;
-            line-height: 12px;
-            color: #132241;
-
-            th {
-                @include lg(font-size, 16px);
-                @include lg(color, #132241);
-                font-weight: 300;
-                &:first-child {
-                    @include lg(display, block);
-                    display: none;
-                    background: #132241;
-                    border-radius: 10px 0 0 0;
-                    font-size: 16px;
-                    line-height: 19px;
-                    padding: 15px 5px;
-                    color: #F8F8F8;
-                }
-            }
-
-            td {
-                @include lg(color, #132241);
-                @include lg(font-size, 16px);
-                text-align: center;
-                color: #FF5757;
-                padding: 10px 0 0 0;
-                &:first-child {
-                    @include lg(display, block);
-                    display: none;
-                    background: #132241;
-                    border-radius: 0 0 0 10px;
-                    font-size: 16px;
-                    line-height: 19px;
-                    padding: 15px 5px;
-                    color: #F8F8F8;
-                }
-            }
-        }
     }
 }
 

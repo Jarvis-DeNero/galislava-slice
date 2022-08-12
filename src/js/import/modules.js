@@ -8,5 +8,8 @@ import "%modules%/news/news";
 import "%modules%/list-services/list-services";
 import "%modules%/guestbook/guestbook";
 import "%modules%/gallery/gallery";
+import "%modules%/tabs/tabs";
+import "%modules%/prices/prices";
 import 'slick-carousel/slick/slick.min';
 import '../vendor/jquery.isotope.min';
+import '../custom/_airdatepicker';

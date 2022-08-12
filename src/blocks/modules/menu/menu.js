@@ -16,5 +16,17 @@ $(document).ready(function () {
         if (uri.length > 1) {
             menu.addClass('inside-page');
         }
+
+        $(window).scroll(function () {
+            if (uri.length === 1) {
+                const scrollTop = $(this).scrollTop();
+                if (scrollTop > 240) {
+                    return menu.addClass('inside-page');
+                }
+                if (scrollTop < 100) {
+                    return menu.removeClass('inside-page');
+                }
+            }
+        });
     }
 });

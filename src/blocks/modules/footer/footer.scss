@@ -7,8 +7,17 @@
             display: inline-block;
         }
         img {
+            @include lg(width, 162px);
             width: 77px;
         }
+    }
+    &-single-block {
+        @include lg(flex-wrap, nowrap);
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
     &-menu {
         display: flex;
@@ -21,11 +30,13 @@
             }
         }
         &__item {
+            @include lg(width, auto);
             margin-bottom: 32px;
             width: 50%;
             display: inline-block;
             vertical-align: top;
             &_tertiary {
+                @include lg(width, auto);
                 width: 31%;
                 text-align: left;
                 & + & {
@@ -40,21 +51,29 @@
             }
         }
         &__title {
+            @include lg(font-size, 20px);
+            @include lg(line-height, 24px);
             font-size: 16px;
             & + .footer-menu__subitem {
                 margin-top: 5px;
             }
         }
         &__subitem {
+            @include lg(margin, 10px 0 0 12px);
+            @include lg(font-size, 16px);
+            @include lg(line-height, 20px);
             display: block;
             font-size: 10px;
             margin: 0 0 0 12px;
             & + & {
+                @include lg(margin-top, 10px);
                 margin-top: 2px;
             }
         }
     }
     &__contacts {
+        @include lg(width, 250px);
+        @include lg(order, -1);
         font-size: 10px;
         color: #F8F8F8;
         [class*=icon-] {
@@ -69,6 +88,8 @@
         }
         ul {
             li {
+                @include lg(font-size, 16px);
+                @include lg(line-height, 20px);
                 display: flex;
                 align-items: flex-start;
                 line-height: 14px;
@@ -76,6 +97,7 @@
                     align-items: center;
                 }
                 & + li {
+                    @include lg(margin-top, 10px);
                     margin-top: 5px;
                 }
             }
@@ -85,11 +107,14 @@
         }
     }
     &__logo-akk {
+        @include lg(text-align, center);
         margin-top: 45px;
         a {
             display: inline-block;
         }
         img {
+            @include lg(width, 250px);
+            @include lg(margin, 0 auto);
             width: 154px;
         }
     }

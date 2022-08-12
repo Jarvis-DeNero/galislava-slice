@@ -1,4 +1,6 @@
 .content, .content_margin {
+    @include lg(font-size, 16px);
+    @include lg(line-height, 20px);
     margin: 13px 0 40px 0;
     font-weight: 500;
     font-size: 12px;
@@ -6,12 +8,16 @@
     color: #132241;
 }
 .content_margin {
-    *:not(img) {
+    *:not(img):not(ul):not(ol):not(figure) {
+        @include lg(margin, 1rem);
         margin: 0 1rem 10px 1rem;
     }
     figure {
+        @include lg(margin, 0 1rem 50px 1rem);
         margin: 0 0 30px 0;
         figcaption {
+            @include lg(font-size, 16px);
+            @include lg(line-height, 20px);
             margin: 4px 0 0 0;
             text-align: center;
             font-weight: 500;
@@ -25,11 +31,26 @@
         text-decoration: underline;
     }
     cite {
+        @include lg(font-size, 20px);
+        @include lg(line-height, 24px);
         font-size: 12px;
         margin: 20px 0 15px 0;
     }
+    ul {
+        list-style: disc;
+    }
+    ul, ol {
+        display: block;
+        margin: 1rem 1rem 1rem 2rem;
+    }
+    .link, .link-arrow {
+        @include lg(font-size, 20px);
+        @include lg(line-height, 24px);
+        @include lg(margin, 0 0 20px 0);
+    }
+
 }
-.link {
+.link, .link-arrow {
     color: #FF5757;
     text-align: center;
     display: block;
@@ -38,7 +59,14 @@
     line-height: 19px;
     margin: 0 0 10px 0;
 }
+.link-arrow {
+    &:after {
+        content: " -->";
+    }
+}
 cite {
+    @include lg(padding, 63px 128px);
+    @include lg(text-align, center);
     background: #FF5757;
     margin: 20px 0 15px 0;
     padding: 20px 14px;
@@ -48,4 +76,17 @@ cite {
     color: #F8F8F8;
     display: block;
     font-style: normal;
+    position: relative;
+    &:after {
+        content: url("/img/svg/quotes.svg");
+        position: absolute;
+        top: 40px;
+        left: 100px;
+    }
+    &:before {
+        content: url("/img/svg/quotes.svg");
+        position: absolute;
+        bottom: 20px;
+        right: 100px;
+    }
 }
