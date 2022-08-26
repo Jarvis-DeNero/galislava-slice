@@ -3,6 +3,9 @@
         @include lg(margin, 40px 0 0 0);
         &__item {
             margin: 8px;
+            img {
+                border-radius: 26px;
+            }
         }
     }
     &-cats {

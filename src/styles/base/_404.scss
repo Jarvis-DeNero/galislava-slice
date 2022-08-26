@@ -22,4 +22,7 @@
     @include lg(font-size, 44px);
     @include lg(line-height, 55px);
     margin: 2rem 0;
+    .button {
+        @include lg(padding, 25px 78px);
+    }
 }

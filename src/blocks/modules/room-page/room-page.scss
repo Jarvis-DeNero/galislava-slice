@@ -48,6 +48,9 @@
         &__item {
             width: 48%;
             position: relative;
+            img {
+                border-radius: 10px;
+            }
             &:nth-child(even) {
                 margin: 0 0 0 auto;
             }
@@ -129,6 +132,9 @@
         position: relative;
         &__item {
             position: relative;
+            img {
+                border-radius: 20px;
+            }
         }
         .slick-arrow {
             @include lg(opacity, 1);

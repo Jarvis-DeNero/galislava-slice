@@ -6,6 +6,13 @@
     font-size: 12px;
     line-height: 16px;
     color: #132241;
+    p {
+        @include lg(margin, 0 0 1rem 0);
+        margin: 0 0 .5rem 0;
+    }
+}
+.content_after-list {
+    @include lg(margin, 64px 0 96px 0);
 }
 .content_margin {
     *:not(img):not(ul):not(ol):not(figure) {
@@ -89,4 +96,8 @@ cite {
         bottom: 20px;
         right: 100px;
     }
+}
+h2 {
+    @include lg(margin, 0 0 1.5rem 0);
+    margin: 0 0 1rem 0;
 }

@@ -1,0 +1,43 @@
+.pagination {
+    text-align: center;
+    ul {
+        li {
+            display: inline-block;
+            a {
+                display: inline-block;
+                vertical-align: middle;
+                color: #A1A1A1;
+                &:first-child, &:last-child {
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+                &:hover {
+                    color: #132241;
+                }
+            }
+            & + li {
+                margin: 0 0 0 7px;
+            }
+            &.active {
+                a {
+                    color: #132241;
+                }
+            }
+            &:first-child {
+                & + li {
+                    margin: 0 0 0 20px;
+                }
+            }
+            &:last-child {
+                margin: 0 0 0 20px;
+            }
+            span {
+                &:before {
+                    color: #A1A1A1;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}

@@ -24,6 +24,10 @@ $(document).ready(function () {
             return $(this).next('input').click();
         });
 
+        guestbookForm.on('click', '.icon-close', function () {
+            return guestbookForm.hide();
+        });
+
         $('.star.rating').click(function () {
             const rate = $(this).data('rating');
             const _this = $(this);

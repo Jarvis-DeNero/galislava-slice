@@ -48,25 +48,31 @@
     @include lg(display, block);
     display: none;
     text-align: center;
-    margin: 1rem 0 0 0;
     li {
         @include lg(display, inline-block);
+        @include lg(margin, 1rem 0 0 0);
         a {
             padding: 5px 8px;
             display: inline-block;
-            &.current {
-                color: #ffffff;
+            color: #132241;
+            font-size: 20px;
+            line-height: 24px;
+            &:hover {
+                color: #FF5757;
                 text-decoration: none;
-                background-color: #FF5757;
+            }
+            &.current {
+                color: #FF5757;
             }
         }
     }
 }
 .gallery-images {
+    @include lg(margin, 1rem 0 96px 0);
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin: 1rem 0 0 0;
+    margin: 1rem 0 2rem 0;
     article {
         @include lg(width, 25%);
         @include lg(margin-top, 20px);

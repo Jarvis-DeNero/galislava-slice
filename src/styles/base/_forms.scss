@@ -22,6 +22,8 @@ form {
         background-repeat: no-repeat;
         background-position: right 6px top 50%;
         background-size: 16px 16px;
+        background-color: transparent;
+        padding: 4px 0;
         line-height: normal;
         border-top: 0;
         border-left: 0;
@@ -131,7 +133,7 @@ form {
             width: 100%;
             > div {
                 overflow: hidden;
-                width: 200px;
+                width: 170px;
                 input {
                     box-sizing: border-box;
                     width: unset;
@@ -148,8 +150,18 @@ form {
             }
         }
     }
+    .row {
+        .col-4 {
+            &:first-child {
+                .form-group {
+                    margin: 0;
+                }
+            }
+        }
+    }
     select {
-        min-width: 280px;
+        @include lg(min-width, 280px);
+        min-width: 100%;
     }
     textarea {
         background: #FAFAFA;

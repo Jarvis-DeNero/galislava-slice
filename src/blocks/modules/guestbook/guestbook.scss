@@ -116,14 +116,15 @@
 }
 
 .guestbook-form {
-    padding: 1rem;
+    @include lg(padding, 1rem);
+    padding: 3rem 1rem 1rem 1rem;
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     display: none;
-    z-index: 999;
+    z-index: 9999;
     .icon-close {
         background-color: rgba(255, 255, 255, .9);
         padding: 4px;
@@ -172,11 +173,12 @@
         }
 
         textarea {
+            @include lg(height, 200px);
             width: 100%;
             box-sizing: border-box;
             background: #F8F8F8;
             border: none;
-            height: 200px;
+            height: 120px;
             padding: 20px;
 
             &:focus {
